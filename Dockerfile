@@ -6,7 +6,7 @@ RUN echo 'shippable ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 RUN mkdir -p /home/shippable/.ssh /home/shippable/wrk
 RUN chown -R shippable:shippable /home/shippable
 RUN sudo DEBIAN_FRONTEND=noninteractive apt-get update
-RUN sudo DEBIAN_FRONTEND=noninteractive apt-get install -y python-pip git openssh-client
+RUN sudo DEBIAN_FRONTEND=noninteractive apt-get install -y python-pip git openssh-client mysql-client
 RUN sudo pip install virtualenv
 
 ADD . /home/shippable/wrk
