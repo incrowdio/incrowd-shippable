@@ -1,5 +1,5 @@
 FROM incrowd/incrowd-docker-base
-MAINTAINER ragesh@shippable.com
+MAINTAINER josh@servercobra.com
 
 RUN useradd -d /home/shippable -m -s /bin/bash -p shippablepwd shippable
 RUN echo 'shippable ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
